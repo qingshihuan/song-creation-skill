@@ -163,8 +163,8 @@ MEDIA:/path/to/output.mp3
 
 ### 启动 ComfyUI
 ```bash
-# ✅ 正确方式（必须用此脚本）
-bash /home/qsh/ai/run_comfyui.sh
+# ✅ 正确方式（必须用 setup.sh 安装后生成的脚本）
+bash ~/ai/run_comfyui.sh
 
 # ❌ 禁止手动拼 python 路径
 # ❌ 禁止加 --gpu-only
@@ -252,7 +252,7 @@ xxxx"""
 # 先彻底清理残留进程
 pkill -f "python.*main.py"
 # 再重新启动
-bash /home/qsh/ai/run_comfyui.sh
+bash ~/ai/run_comfyui.sh
 ```
 
 ### 输出文件管理
@@ -281,7 +281,7 @@ os.rmdir(comfyui_output_dir)
 
 每次 spawn 引擎时，**必须在任务模板中包含**：
 1. 先让他读 `tools/comfyui操作手册.md`
-2. 用 `bash /home/qsh/ai/run_comfyui.sh` 启动 ComfyUI
+2. 用 `bash ~/ai/run_comfyui.sh` 启动 ComfyUI
 3. 歌词不能带歌名行
 4. 不能修改 `clip` 等节点引用字段
 
