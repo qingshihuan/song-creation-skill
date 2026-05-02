@@ -127,7 +127,7 @@ cat ~/.openclaw/workspace/tools/comfyui操作手册.md
 - tags: [和弦设计的 Style Tags]
 - 调性：[Key]
 - BPM：[BPM]
-- 时长：[duration]s（建议 185s 稳定上限）
+- 时长：[duration]s（和弦方案建议值）
 - 温度：[temperature]
 - top_p：[top_p]
 - cfg_scale：[cfg]（用 7 最稳定）
@@ -241,8 +241,8 @@ xxxx"""
 | 参数 | 值 |
 |------|-----|
 | Steps | 50（工作流 KSampler 默认） |
-| cfg_scale | 7 |
-| duration | 185s |
+| cfg_scale | 按需设置 |
+| duration | 按需设置（和弦方案建议值） |
 | VAE | VAEDecodeAudioTiled（工作流自带） |
 | seed | 随机 |
 
