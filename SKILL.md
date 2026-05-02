@@ -39,7 +39,7 @@ description: "Multi-agent song creation workflow using 拾光's agent architectu
 **方式**：`sessions_spawn` 启动子 agent
 **参数**：
 - `label`: `writer-lyrics`
-- `model`: `custom-integrate-api-nvidia-com/deepseek-ai/deepseek-v4-pro`（NVIDIA API 版）
+- `model`: 推荐使用创意写作能力强的模型（如 deepseek-v4、GPT-4、Claude 等）
 - `context`: `isolated`
 
 **任务模板**：
@@ -78,7 +78,7 @@ xxxx
 **方式**：`sessions_spawn` 启动子 agent
 **参数**：
 - `label`: `musician-melody`
-- `model`: `custom-integrate-api-nvidia-com/deepseek-ai/deepseek-v4-pro`（NVIDIA API 版）
+- `model`: 推荐使用创意能力强的模型（同写词模型）
 - `context`: `isolated`
 
 **任务模板（包含完整歌词）**：
@@ -267,15 +267,15 @@ os.rmdir(comfyui_output_dir)
 - ComfyUI 输出目录：`~/ai/ComfyUI/output/`
 - 最终归档：`~/.openclaw/workspace/output/YYYYMMDD/audio/`
 
-## 模型分配
+## 模型建议
 
-**优先级**：NVIDIA API 免费模型优先，长时间无响应才切 deepseek/deepseek-v4-flash
+| Agent | 说明 |
+|-------|------|
+| 墨白 ✍️ | 推荐使用创意写作能力强的模型（如 deepseek-v4、GPT-4、Claude 等） |
+| 和弦 🎵 | 推荐使用创意能力强的模型（同写词模型） |
+| 引擎 ⚙️ | 执行型任务，可用默认模型即可 |
 
-| Agent | 模型 | 说明 |
-|-------|------|------|
-| 墨白 ✍️ | `custom-integrate-api-nvidia-com/deepseek-ai/deepseek-v4-pro` | NVIDIA 免费 |
-| 和弦 🎵 | `custom-integrate-api-nvidia-com/deepseek-ai/deepseek-v4-pro` | NVIDIA 免费 |
-| 引擎 ⚙️ | `deepseek/deepseek-v4-flash` | 默认付费 API |
+> 用户可根据自己的 OpenClaw 配置替换对应模型。本技能不依赖特定模型供应商。
 
 ## 引擎 ⚙️ 操作规范
 
